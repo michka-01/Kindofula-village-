@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kindofula Village | Tourisme à Assolongo</title>
+
+  <meta
+    name="description"
+    content="Découvrez Kindofula Village, Groupement Nkilawu, Secteur Assolongo, Muanda RDC : mangroves, plage Ntonde, sel, raphia et vie villageoise."
+  />
+
+  <style>
+    :root {
+      --yellow: #f6c400;
+      --yellow-light: #ffd83d;
+      --black: #101010;
+      --dark: #191919;
+      --cream: #f8f6ef;
+      --white: #ffffff;
+      --muted: #686868;
+      --line: #e6e1d4;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--black);
+      background: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 10px 0;
+      color: var(--black);
+      background: var(--yellow);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: absolute;
+      z-index: 10;
+      top: 42px;
+      left: 0;
+      right: 0;
+      padding: 22px 0;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 0.95rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .logo-symbol {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      place-items: center;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 8px;
+      font-size: 1.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      color: #e0e0e0;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 790px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(110deg, rgba(8, 8, 8, 0.94), rgba(8, 8, 8, 0.6)),
+        radial-gradient(circle at 82% 22%, rgba(246, 196, 0, 0.5), transparent 31%),
+        linear-gradient(135deg, #111 0%, #313020 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -110px;
+      bottom: -250px;
+      width: 570px;
+      height: 570px;
+      border: 90px solid rgba(246, 196, 0, 0.14);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 790px;
+      padding-top: 75px;
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      color: var(--yellow);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 38px;
+      height: 3px;
+      background: var(--yellow);
+    }
+
+    h1 {
+      max-width: 850px;
+      margin-bottom: 24px;
+      font-size: clamp(3rem, 8vw, 7.4rem);
+      line-height: 0.9;
+      letter-spacing: -0.075em;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: var(--yellow);
+    }
+
+    .hero-text {
+      max-width: 680px;
+      margin-bottom: 34px;
+      color: #dedede;
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      font-size: 0.86rem;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .button-yellow {
+      color: var(--black);
+      background: var(--yellow);
+    }
+
+    .button-yellow:hover {
+      background: var(--yellow-light);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .button-outline:hover {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .hero-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 58px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-info strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--yellow);
+      font-size: 1.15rem;
+    }
+
+    .hero-info span {
+      color: #c0c0c0;
+      font-size: 0.82rem;
+    }
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-header {
+      max-width: 730px;
+      margin-bottom: 48px;
+    }
+
+    .section-tag {
+      display: block;
+      margin-bottom: 14px;
+      color: #8d7000;
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      margin-bottom: 15px;
+      font-size: clamp(2.35rem, 5vw, 4.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .experiences {
+      background: var(--white);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .experience-card {
+      position: relative;
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.9)),
+        linear-gradient(145deg, #7f6b12, #181818);
+      box-shadow: var(--shadow);
+    }
+
+    .experience-card:nth-child(2) {
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.9)),
+        linear-gradient(145deg, #245c61, #171717);
+    }
+
+    .experience-card:nth-child(3) {
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.9)),
+        linear-gradient(145deg, #9b6b25, #171717);
+    }
+
+    .experience-number {
+      position: absolute;
+      top: 24px;
+      right: 25px;
+      color: rgba(255, 255, 255, 0.28);
+      font-size: 4.5rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .experience-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: auto;
+      place-items: center;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 50%;
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .experience-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .experience-card p {
+      margin-bottom: 22px;
+      color: #dddddd;
+      font-size: 0.94rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.28);
+      color: var(--yellow);
+      font-size: 1.7rem;
+      font-weight: 900;
+    }
+
+    .price small {
+      color: #d5d5d5;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .news {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .news .section-tag {
+      color: var(--yellow);
+    }
+
+    .news .section-header p {
+      color: #bdbdbd;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .news-item {
+      padding: 28px;
+      background: var(--dark);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-top: 5px solid var(--yellow);
+    }
+
+    .news-date {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 6px 9px;
+      color: var(--black);
+      background: var(--yellow);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .news-item h3 {
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+      line-height: 1.25;
+    }
+
+    .news-item p {
+      color: #c2c2c2;
+      font-size: 0.94rem;
+    }
+
+    .news-note {
+      grid-column: span 3;
+      padding: 22px 28px;
+      color: #d8d8d8;
+      background: #242424;
+      border-left: 5px solid var(--yellow);
+    }
+
+    .news-note strong {
+      color: var(--yellow);
+    }
+
+    .practical {
+      background: var(--yellow);
+    }
+
+    .practical .section-tag {
+      color: #725900;
+    }
+
+    .practical-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .practical .section-header p {
+      color: #433700;
+    }
+
+    .practical-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .practical-item {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 18px;
+      padding: 21px;
+      background: rgba(255, 255, 255, 0.38);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .practical-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      color: var(--yellow);
+      background: var(--black);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .practical-item h3 {
+      margin-bottom: 4px;
+      font-size: 1.04rem;
+      text-transform: uppercase;
+    }
+
+    .practical-item p {
+      color: #514300;
+      font-size: 0.94rem;
+    }
+
+    footer {
+      padding: 40px 0;
+      color: #bdbdbd;
+      background: #080808;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-title {
+      color: var(--white);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .footer-title span {
+      color: var(--yellow);
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 0.88rem;
+    }
+
+    .contact strong {
+      color: var(--yellow);
+    }
+
+    .contact a:hover {
+      color: var(--yellow);
+    }
+
+    @media (max-width: 850px) {
+      .experience-grid,
+      .news-grid,
+      .practical-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .news-note {
+        grid-column: span 1;
+      }
+
+      .practical-layout {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        top: 42px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .hero-content {
+        padding-top: 75px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .experience-card {
+        min-height: 350px;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    KINDOFULA VILLAGE · GROUPement NKILAWU · SECTEUR ASSOLONGO · MUANDA RDC
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#accueil" aria-label="Kindofula Village">
+        <span class="logo-symbol">K</span>
+        <span>Kindofula Village</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#experiences">Expériences</a>
+        <a href="#actualite">Actualité</a>
+        <a href="#pratique">Infos pratiques</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-content">
+        <div class="kicker">Destination nature · Kongo Central</div>
+
+        <h1>
+          Explorez<br />
+          <span>Kindofula</span>
+        </h1>
+
+        <p class="hero-text">
+          Bienvenue à Kindofula Village, dans le Groupement Nkilawu,
+          Secteur Assolongo, Territoire de Muanda en République démocratique
+          du Congo. Une destination entre mangroves, plage, savoir-faire
+          local et vie villageoise.
+        </p>
+
+        <div class="buttons">
+          <a class="button button-yellow" href="#experiences">
+            Voir les expériences
+          </a>
+
+          <a class="button button-outline" href="#pratique">
+            Préparer ma visite
+          </a>
+        </div>
+
+        <div class="hero-info">
+          <div>
+            <strong>03</strong>
+            Expériences touristiques
+          </div>
+
+          <div>
+            <strong>Juin—Sept.</strong>
+            Meilleure période
+          </div>
+
+          <div>
+            <strong>Assolongo</strong>
+            Muanda · RDC
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiences" id="experiences">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 · Expériences touristiques</span>
+          <h2>Trois façons de vivre Kindofula</h2>
+          <p>
+            Explorez les paysages, les activités et les traditions qui font
+            l'identité touristique de Kindofula Village.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <span class="experience-number">01</span>
+            <div class="experience-icon">✦</div>
+
+            <h3>Parc Marin des Mangroves</h3>
+            <p>
+              Parcours en pirogue à la découverte des mangroves et de leur
+              environnement naturel exceptionnel.
+            </p>
+
+            <div class="price">
+              <span>15 $</span>
+              <small>Balade en pirogue</small>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-number">02</span>
+            <div class="experience-icon">≈</div>
+
+            <h3>Plage Ntonde</h3>
+            <p>
+              Profitez de la plage Ntonde, découvrez les marmites et observez
+              les traces du naufrage dans un cadre côtier unique.
+            </p>
+
+            <div class="price">
+              <span>À découvrir</span>
+              <small>Expérience locale</small>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-number">03</span>
+            <div class="experience-icon">◆</div>
+
+            <h3>Vie du village</h3>
+            <p>
+              Rencontrez Kindofula à travers la production du sel, le raphia
+              et les gestes du quotidien au cœur du village.
+            </p>
+
+            <div class="price">
+              <span>À découvrir</span>
+              <small>Immersion villageoise</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="news" id="actualite">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 · Actualité officielle 2026</span>
+          <h2>Kindofula se prépare à l'avenir</h2>
+          <p>
+            Les projets annoncés pour Assolongo et Kindofula renforcent
+            l'intérêt de la destination tout en appelant à la protection des
+            mangroves.
+          </p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-item">
+            <span class="news-date">Octobre 2025</span>
+            <h3>Base navale de la 141e</h3>
+            <p>
+              Délocalisation de la base navale de la 141e vers Kindofula,
+              annoncée à la suite de l'inspection du VPM Guy Kabombo.
+            </p>
+          </article>
+
+          <article class="news-item">
+            <span class="news-date">Fin 2026</span>
+            <h3>Port Banana</h3>
+            <p>
+              Projet DP World de 1,2 milliard de dollars, avec un quai de
+              600 m et une capacité annoncée de 450.000 conteneurs.
+            </p>
+          </article>
+
+          <article class="news-item">
+            <span class="news-date">Juillet 2026</span>
+            <h3>Visite de Jean-Pierre Bemba</h3>
+            <p>
+              Visite du chantier Muanda-Banana et appel à la préservation des
+              mangroves de la région.
+            </p>
+          </article>
+
+          <div class="news-note">
+            <strong>Notre engagement :</strong>
+            valoriser le tourisme local et protéger les mangroves, la plage
+            et les ressources naturelles de Kindofula.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="practical" id="pratique">
+      <div class="container practical-layout">
+        <div class="section-header">
+          <span class="section-tag">03 · Infos pratiques</span>
+          <h2>Préparez votre séjour</h2>
+          <p>
+            Pour profiter pleinement de Kindofula Village, choisissez la
+            bonne période et privilégiez une découverte respectueuse du
+            territoire et de ses habitants.
+          </p>
+        </div>
+
+        <div class="practical-list">
+          <article class="practical-item">
+            <div class="practical-icon">☀</div>
+            <div>
+              <h3>Meilleure période</h3>
+              <p>
+                La meilleure période pour visiter Kindofula est de juin à
+                septembre.
+              </p>
+            </div>
+          </article>
+
+          <article class="practical-item">
+            <div class="practical-icon">♧</div>
+            <div>
+              <h3>Respect des mangroves</h3>
+              <p>
+                Respectez les espaces naturels, ne laissez aucun déchet et
+                suivez les indications des accompagnateurs locaux.
+              </p>
+            </div>
+          </article>
+
+          <article class="practical-item">
+            <div class="practical-icon">✓</div>
+            <div>
+              <h3>Réservation et renseignements</h3>
+              <p>
+                Contactez l'équipe Kindofula Village avant votre visite pour
+                organiser votre expérience touristique.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-title">
+        <span>Kindofula</span> Village
+      </div>
+
+      <div class="contact">
+        Ir <strong>MICHAEL KALALA</strong><br />
+        <a href="tel:+243907728405">0907728405</a><br />
+        <a href="mailto:irmichkavela@gmail.com">
+          irmichkavela@gmail.com
+        </a><br />
+        <a href="mailto:michaelkalala09@gmail.com">
+          michaelkalala09@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
